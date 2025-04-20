@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Investment Result </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="h1 navbar-brand text-danger"
+                   href="/">PokeNet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/investment">Investment Advice</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/search">Search for a Card</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/list">Card List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Sign Out</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="m-3">{{ message | safe }}</div>
+</body>
+</html>

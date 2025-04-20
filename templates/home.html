@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home Page</title>
+</head>
+<body>
+    {% if session %}
+        <nav class="navbar navbar-expand-sm bg-light container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="h1 navbar-brand text-danger"
+                   href="/">PokeNet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/investment">Investment Advice</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/search">Search for a Card</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/list">Card List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Sign Out</a>
+            </li>
+        </ul>
+        </nav>
+        <p>Welcome, {{session.userinfo.name}}!</p>
+    {% else %}
+        <div class="m-3">
+            <h1 class="text-danger">PokeNet</h1><br>
+            <h2>About Us</h2>
+            <p>We created PokeNet as a reliable source for both Pokemon TCG
+                collectors and players. We hope to enhance the experiences
+                of new and experienced TCG enthusiasts everywhere. -Ryan
+                and Michelle</p>
+            <h2>What You'll Find</h2>
+            <p>Within this website, we have created several features we
+                hope you will enjoy. These include:</p>
+            <ul>
+                <li>Collector Investment Advice</li>
+                <li>Card Search</li>
+                <li>Card List</li>
+            </ul>
+            <a href="/login" class="btn btn-danger">Login</a>
+        </div>
+    {% endif %}
+</body>
+</html>

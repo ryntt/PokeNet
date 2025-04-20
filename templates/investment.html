@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Investment Result </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="h1 navbar-brand text-danger"
+                   href="/">PokeNet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/investment">Investment Advice</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/search">Search for a Card</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/list">Card List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Sign Out</a>
+            </li>
+        </ul>
+    </nav>
+    <h1 class="m-3">Investment Advice Form</h1>
+    <p class="m-3">Give us some details about a card you're looking at, and
+        we'll
+        give you some investment advice on it!</p>
+    <form>
+        <div class="m-3">
+            <label for="name" class="form-label">Card Name:</label>
+            <input type="text" class="form-control" name="card_name"
+                   placeholder="Enter the name of the card (e.g. Charizard ex, Rare Candy, Cycling Road)">
+        </div>
+        <div class="m-3">
+            <label for="set" class="form-label">Set:</label>
+            <input type="text" class="form-control" name="set"
+                   placeholder="Enter the set of the card (e.g. Crown Zenith, 151, Journey Together)">
+        </div>
+        <div class="m-3">
+            <label for="expansion" class="form-label">Expansion:</label>
+            <input type="text" class="form-control" name="expansion"
+                   placeholder="Enter the expansion of the card, if applicable (e.g. Scarlet and Violet, Sword and Shield, Diamond and Pearl)">
+        </div>
+        <div class="m-3">
+            <label for="rarity" class="form-label">Rarity:</label>
+            <input type="text" class="form-control" name="rarity"
+                   placeholder="Enter the rarity of the card, if applicable (e.g. Common, Rare, Special Illustration Rare)">
+        </div>
+        <button type="submit" class="btn btn-danger">Submit Details</button>
+    </form>
+</body>
+</html>
