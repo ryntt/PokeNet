@@ -27,5 +27,30 @@
             </li>
         </ul>
     </nav>
+    <h1 class="m-3">Search for a Card!</h1>
+    <p class="m-3">Search for a card(s) you're looking for here.</p>
+    <form method="POST">
+        <div class="m-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" name="name"
+                   placeholder="Enter the name of the card (e.g. Charizard ex, Rare Candy, Cycling Road)" >
+        </div>
+        <div class="m-3">
+            <label for="set" class="form-label">Set:</label>
+            <input type="text" class="form-control" name="set"
+                   placeholder="Enter the set of the card (e.g. Crown Zenith, 151, Journey Together)" >
+        </div>
+        <div class="m-3">
+            <label for="rarity" class="form-label">Rarity:</label>
+            <input type="text" class="form-control" name="rarity"
+                   placeholder="Enter the rarity of the card, if applicable (e.g. Common, Rare, Special Illustration Rare)" >
+        </div>
+        <div class="m-3">
+            <label for="artist" class="form-label">Artist:</label>
+            <input type="text" class="form-control" name="artist"
+                   placeholder="Enter the artist of the card, if applicable (e.g. Akira Komayama)" >
+        </div>
+        <button type="submit" class="btn btn-danger m-3">Search</button>
+    </form>
 </body>
 </html>

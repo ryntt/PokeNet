@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Investment Result </title>
+    <title>Search Result</title>
 </head>
-<body>
+<br>
     <nav class="navbar navbar-expand-sm bg-light container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -27,9 +28,9 @@
             </li>
         </ul>
     </nav>
-    <div class="m-3">
-        <img src="{{ img }}" class="float-end ms-3">
-        {{ message | safe }}
-    </div>
+    {% for card in cards %}
+        <img src="{{ card.images.small }}" class="m-3"><br>
+    {% endfor %}
+
 </body>
 </html>

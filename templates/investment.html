@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Investment Result </title>
+    <title>Investment Advice </title>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-light container-fluid">
@@ -31,28 +31,24 @@
     <p class="m-3">Give us some details about a card you're looking at, and
         we'll
         give you some investment advice on it!</p>
-    <form>
+    <form method="POST">
         <div class="m-3">
-            <label for="name" class="form-label">Card Name:</label>
+            <label for="name" class="form-label">Name:</label>
             <input type="text" class="form-control" name="card_name"
-                   placeholder="Enter the name of the card (e.g. Charizard ex, Rare Candy, Cycling Road)">
+                   placeholder="Enter the name of the card (e.g. Charizard ex, Rare Candy, Cycling Road)" required>
         </div>
         <div class="m-3">
             <label for="set" class="form-label">Set:</label>
             <input type="text" class="form-control" name="set"
-                   placeholder="Enter the set of the card (e.g. Crown Zenith, 151, Journey Together)">
-        </div>
-        <div class="m-3">
-            <label for="expansion" class="form-label">Expansion:</label>
-            <input type="text" class="form-control" name="expansion"
-                   placeholder="Enter the expansion of the card, if applicable (e.g. Scarlet and Violet, Sword and Shield, Diamond and Pearl)">
+                   placeholder="Enter the set of the card (e.g. Crown Zenith, 151, Journey Together)" required>
         </div>
         <div class="m-3">
             <label for="rarity" class="form-label">Rarity:</label>
             <input type="text" class="form-control" name="rarity"
-                   placeholder="Enter the rarity of the card, if applicable (e.g. Common, Rare, Special Illustration Rare)">
+                   placeholder="Enter the rarity of the card, if applicable (e.g. Common, Rare, Special Illustration Rare)" required>
         </div>
-        <button type="submit" class="btn btn-danger">Submit Details</button>
+        <button type="submit" class="btn btn-danger m-3">Submit
+            Details</button>
     </form>
 </body>
 </html>
