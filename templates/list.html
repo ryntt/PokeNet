@@ -27,5 +27,22 @@
             </li>
         </ul>
     </nav>
+        <h2 class="text-center mt-4">Your Wish List</h2>
+       <div class="d-flex flex-wrap">
+            {% for card in cards %}
+                <div class="position-relative m-3 text-center border rounded p-3" style="width: 200px;">
+                    <form method="POST" action="{{ url_for('list_cards') }}" style="position: absolute; bottom: 10px; right: 10px;">
+                        <input type="hidden" name="card_image_url" value="{{ card.images.small }}">
+                        <button type="submit" style="background: white; border: none; border-radius: 50%; padding: 5px; cursor: pointer;">
+                            <strong>-</strong>
+                        </button>
+                    </form>
+                    <p class="mb-1">Name: {{ card.name }}</p>
+                    <p class="mb-2">Set: {{ card.set.name }}</p>
+                    <img src="{{ card.images.small}}" class="img-fluid">
+                </div>
+            {% endfor %}
+        </div>
+
 </body>
 </html>

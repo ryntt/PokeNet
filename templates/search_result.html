@@ -7,7 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Search Result</title>
 </head>
-<br>
+<body>
+
     <nav class="navbar navbar-expand-sm bg-light container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -28,9 +29,34 @@
             </li>
         </ul>
     </nav>
-    {% for card in cards %}
-        <img src="{{ card.images.small }}" class="m-3"><br>
-    {% endfor %}
-
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="container mt-3">
+          {% for message in messages %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+    <div class="d-flex flex-wrap">
+        {% for card in cards %}
+            <div class="position-relative m-3 text-center border rounded p-3" style="width: 200px;">
+                <form method="POST" action="{{ url_for('add_cards') }}" style="position: absolute; bottom: 10px; right: 10px;">
+                    <input type="hidden" name="card_image_url" value="{{ card.images.small }}">
+                    <input type="hidden" name="card_name" value="{{ card.name }}">
+                    <input type="hidden" name="card_set" value="{{ card.set.name }}">
+                    <button type="submit" style="background: white; border: none; border-radius: 50%; padding: 5px; cursor: pointer;">
+                        <strong>+</strong>
+                    </button>
+                </form>
+                <p class="mb-1">Name: {{ card.name }}</p>
+                <p class="mb-2">Set: {{ card.set.name }}</p>
+                <img src="{{ card.images.small }}" class="img-fluid">
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
